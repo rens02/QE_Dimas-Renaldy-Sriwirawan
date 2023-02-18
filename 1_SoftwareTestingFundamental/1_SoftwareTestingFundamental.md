@@ -41,3 +41,25 @@ TestAdd_1 dan TestAdd_2 menguji fungsi add dimana Hasil TestAdd_1 mengindikasika
 Lalu TestSubstract_1 dan TestSubstract_2 menguji fungsi subtract dimana Hasil TestSubstract_1 mengindikasikan test unit kasus pertama berhasil dan hasil TestSubstract_2 mengindikasikan test unit kasus kedua tidak berhasil
 
  
+
+**Soal Software Testing as a Career Path**
+
+Sebutkan berbagai skill yang dibutuhkan untuk menjadi seorang software tester!
+
+Non-Technical Skill:
+
+
+
+* Analytical Skill
+* Communicaation Skill
+* Time Management & Organization Skill
+* Great Attitude
+* Passion
+
+Technical Skill:
+
+
+
+* Basic knowledge of Unix/Linux Commands
+* Knowledge and hand-on experience on Test Management Tool
+* Knowledge and hand-on experience on Automation Testing Tool
