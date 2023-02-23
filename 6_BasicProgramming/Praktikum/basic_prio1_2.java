@@ -1,7 +1,7 @@
 package Alterra_Academy;
 
 import java.util.Scanner;
-public class basic_prio2 {
+public class basic_prio1_2 {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         System.out.print("Masukkan Harga Beli: ");

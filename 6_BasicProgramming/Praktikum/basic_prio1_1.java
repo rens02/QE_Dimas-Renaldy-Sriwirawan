@@ -1,6 +1,6 @@
 package Alterra_Academy;
 
-public class basic_prio1 {
+public class basic_prio1_1 {
     public static void main(String[] args) {
 
 
