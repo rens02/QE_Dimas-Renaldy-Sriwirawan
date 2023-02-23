@@ -3,19 +3,19 @@ package Alterra_Academy;
 public class oop_prio2 {
     public static void add(int x, int y){
         int hasil = x + y;
-        System.out.println(hasil);
+        System.out.println("Penjumlahan: "+hasil);
     }
     public static void substract(int x, int y) {
         int hasil = x - y;
-        System.out.println(hasil);
+        System.out.println("Pengurangan: " +hasil);
     }
     public static void multiply(int x, int y){
         int hasil = x * y;
-        System.out.println(hasil);
+        System.out.println("Perkalian: "+ hasil);
     }
     public static void divide(int x, int y){
         float hasil = x / y;
-        System.out.println(hasil);
+        System.out.println("Pembagian: "+ hasil);
     }
     public static void main(String[] args) {
         add(3,4);
@@ -24,4 +24,3 @@ public class oop_prio2 {
         divide(12,3);
     }
 }
-
