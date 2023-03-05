@@ -1,1 +1,3 @@
-{\rtf1}
+```
+AYO KITA COBA IN AWAWAWAW
+```
