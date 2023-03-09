@@ -1,4 +1,4 @@
-# Basic Programming
+#               Basic Programming
 - IDE merupakan sebuah tools yang membantu developer untuk membuat aplikasi. Di dalam IDE terdapat source code editor, build automation tools, dan debugger. Berbagai macam IDE yang dapat digunakan developer untuk memulai membuat aplikasi menggunakan Java seperti NetBeans, OpenJDK, Eclipse, dan IntelliJ.
 
 IDE populer untuk para developer saat ini adalah IntelliJ
@@ -20,7 +20,16 @@ looping adalah perulangan (mengulang kode sesuai dengan parameter yang telah dit
 - While = Perulangan dengan menggunakan while digunakan jika proses saat kondisi terpenuhi
 
 
-# Object Oriented Programming
+
+
+
+
+
+
+
+
+
+#           Object Oriented Programming
 ## CLASS DAN METHOD
 - Class adalah blueprint atau cetakan untuk membuat object. Class berisi deklarasi semua properties dan functions yang dimiliki oleh object, dan setiap object dibuat dari class. Dengan menggunakan class, kita dapat membuat object sebanyak-banyaknya. Object adalah data yang berisi field / properties / attributes dan method / function / behavior
 
