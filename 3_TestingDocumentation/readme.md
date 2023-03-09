@@ -5,11 +5,7 @@
 - Test Case adalah kumpulan langkah percobaan case positif maupun negatif pada test scenario. Test case juga memiliki kumpulan dari pre conditions, steps, expected results, status dan actual result.
 Contohnya mengecek fungsi login, forgot email, serta fungsi create new account.
 
-Test Scenario answer
-"What to be tested"
- 
-Test Case answer
-"How to be tested"
+- Test Scenario answer "What to be tested", and Test Case answer "How to be tested"
 
 Jika diibaratkan, Test Scenario menjawab apa yang akan diuji dan Test Case menjawab bagaimana cara mengujinya.
 

@@ -1,4 +1,4 @@
-Pada fase apa saja QE berperan pada proses SDLC? Sebutkan dan jelaskan peran seperti apa yang QE dapat lakukan pada setiap fase tersebut!
+# Pada fase apa saja QE berperan pada proses SDLC? Sebutkan dan jelaskan peran seperti apa yang QE dapat lakukan pada setiap fase tersebut!
 
 ```
 Seorang Quality Engineer biasanya ikut bagian dalam fase Pengujian dari SDLC. Peran seorang Quality
@@ -7,7 +7,7 @@ Quality Engineer bertanggung jawab untuk mengembangkan rencana pengujian, meranc
 melaporkan dan melacak cacat, serta memastikan bahwa perangkat lunak memenuhi kriteria kualitas.
 ```
 
-Menurut Anda, apa tantangan ketika menerapkan agile testing? Berikan penjelasan pada masing-masing 5 poin agile testing manifesto!
+# Menurut Anda, apa tantangan ketika menerapkan agile testing? Berikan penjelasan pada masing-masing 5 poin agile testing manifesto!
 
 ```
 Perubahan pola pikir: Beralih dari pola pikir tradisional di mana pengujian dianggap sebagai fase terpisah
