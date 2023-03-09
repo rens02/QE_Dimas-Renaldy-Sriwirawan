@@ -1,7 +1,7 @@
 # BASIC PROGRAMMING
 ## TUGAS PRIORITAS 1
 ![path](assets/basic_prio1_1.jpg)
-![path](assets/basic_prio1_2.jpg)
+![path](assets/basic_prio1_2.png)
 ## TUGAS PRIORITAS 2
 ![path](assets/basic_prio2_1.jpg)
 ![path](assets/basic_prio2_2.jpg)
