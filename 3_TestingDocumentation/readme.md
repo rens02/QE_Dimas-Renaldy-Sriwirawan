@@ -1,12 +1,13 @@
 # TEST CASE & TEST SCENARIO
 
--Test Scenario adalah bagaimana kita memikirkan tentang apa yg akan kita test. Test scenario sangat mirip dengan test case tetapi test scenario adalah level test case yang lebih tinggi lagi.
+- Test Scenario adalah bagaimana kita memikirkan tentang apa yg akan kita test. Test scenario sangat mirip dengan test case tetapi test scenario adalah level test case yang lebih tinggi lagi.
 
--Test Case adalah kumpulan langkah percobaan case positif maupun negatif pada test scenario. Test case juga memiliki kumpulan dari pre conditions, steps, expected results, status dan actual result.
+- Test Case adalah kumpulan langkah percobaan case positif maupun negatif pada test scenario. Test case juga memiliki kumpulan dari pre conditions, steps, expected results, status dan actual result.
 Contohnya mengecek fungsi login, forgot email, serta fungsi create new account.
 
 Test Scenario answer
 "What to be tested"
+ 
 Test Case answer
 "How to be tested"
 
