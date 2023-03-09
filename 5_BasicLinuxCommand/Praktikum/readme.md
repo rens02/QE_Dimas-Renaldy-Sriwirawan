@@ -14,7 +14,7 @@ cd: digunakan untuk mengatur directory aktif(paramete .. berarti back ke sebelum
 
 ![path](assets/top.jpg)
 ```
-touch digunakan untuk melihat seluruh proses yang berjalan dan melihat semua resource pada system
+top digunakan untuk melihat seluruh proses yang berjalan dan melihat semua resource pada system
 ```
 
 
