@@ -31,11 +31,38 @@ public class basic_prio1_1 {
 }
 ```
 ![path](assets/basic_prio1_1.jpg)
+```
+import java.util.Scanner;
+public class basic_prio1_2 {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Masukkan Harga Beli: ");
+        int hargaBeli = scan.nextInt();
+        System.out.print("Masukkan Harga jual: ");
+        int hargaJual = scan.nextInt();
+        int hasilPenjualan = hargaJual - hargaBeli;
+        if (hargaJual > hargaBeli){
+            System.out.println("untung sebesar:"+hasilPenjualan);
+        }else{
+            if (hargaJual < hargaBeli){
+                System.out.println("rugi sebesar:"+hasilPenjualan);
+            }else{
+                System.out.println("Tidak rugi maupun untung");
+            }
+        }
+    }
+
+}
+```
 ![path](assets/basic_prio1_2.png)
 ## TUGAS PRIORITAS 2
+
 ![path](assets/basic_prio2_1.jpg)
 ![path](assets/basic_prio2_2.jpg)
 ## TUGAS EKSPLORASI
+```
+
+```
 ![path](assets/basic_eksplo.jpg)
 
 
