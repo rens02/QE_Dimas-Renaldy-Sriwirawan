@@ -56,12 +56,78 @@ public class basic_prio1_2 {
 ```
 ![path](assets/basic_prio1_2.png)
 ## TUGAS PRIORITAS 2
+```
+public class basic_prio2_1 {
+    public static void drawXYZ(int height) {
+        int s = 0;
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < height; j++) {
+                s++;
+                if (s % 3 == 0) {
+                    System.out.print("X ");
+                } else if (s % 2 == 1) {
+                    System.out.print("Y ");
+                } else {
+                    System.out.print("Z ");
+                }
+            }
+            System.out.println();
+        }
+    }
 
+    public static void main(String[] args) {
+        drawXYZ(5);
+    }
+}
+```
 ![path](assets/basic_prio2_1.jpg)
+```
+public class basic_prio_2_2 {
+    public static void printAsterisk(int n) {
+        int space = n - 1;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < space; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+            space--;
+        }
+    }
+    public static void main(String[] args) {
+        printAsterisk(5);
+    }
+}
+```
 ![path](assets/basic_prio2_2.jpg)
 ## TUGAS EKSPLORASI
 ```
+class Main {
+    private static String encrypt(String s) {
+        String result = "";
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c >= 'A' && c <= 'Z') {
+                // melakukan pergeseran huruf sebanyak 10 urutan ke kanan pada susunan alfabet
+                c = (char) (((c - 'A' + 10) % 26) + 'A');
+            } else if (c >= 'a' && c <= 'z') {
+                c = (char) (((c - 'a' + 10) % 26) + 'a');
+            }
+            result += c;
+        }
+        return result;
+    }
 
+    public static void main(String[] args) {
+        System.out.println(encrypt("SEPULSA OKE")); // COZEVCK YUO
+        System.out.println(encrypt("ALTERRA ACADEMY")); // KVDOBBK KMKNOWI
+        System.out.println(encrypt("INDONESIA")); // SXNYXOCSK
+        System.out.println(encrypt("GOLANG")); // QYVKXQ
+        System.out.println(encrypt("PROGRAMMER")); // ZBYQBKWWOB
+    }
+}
 ```
 ![path](assets/basic_eksplo.jpg)
 
