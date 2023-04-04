@@ -1,0 +1,8 @@
+testNumber,testDesc,testType,test link,testData,expectedResult,actualResult
+1,Ambil Semua Data,Positive,https://jsonplaceholder.typicode.com/posts,,get all data,get all data
+2,Ambil Semua Data tapi typo pada link,Negative,https://jsonplaceholder.typicode.com/posts1,,404 not found,404 not found
+3,Menambahkan data,Positive,https://jsonplaceholder.typicode.com/posts,"{""title"": ""BOARRR"",""body"": ""BAAAAAR"",""userId"": 122}","{""title"": ""BOARRR"",""body"": ""BAAAAAR"",""userId"": 122, ""id"":101}","{""title"": ""BOARRR"",""body"": ""BAAAAAR"",""userId"": 122, ""id"":101}"
+4,Menambahkan data dengan negative di depan angka,Positive,https://jsonplaceholder.typicode.com/posts,"{""title"": ""BOARRR"",""body"": ""BAAAAAR"",""userId"": -55}","{""title"": ""BOARRR"",""body"": ""BAAAAAR"",""userId"": -55, ""id"":101}","{""title"": ""BOARRR"",""body"": ""BAAAAAR"",""userId"": -55, ""id"":101}"
+5,Menambahkan data dengan negative di belakang angka,Negative,https://jsonplaceholder.typicode.com/posts,"{""title"": ""BOARRR"",""body"": ""BAAAAAR"",""userId"": 55-}",500 Internal Server Error,500 Internal Server Error
+6,Mengambil data berdasarkan id,Positive,https://jsonplaceholder.typicode.com/posts?id=3,,,
+7,Mengambil data berdasarkan id,Negative,https://jsonplaceholder.typicode.com/posts,,,
