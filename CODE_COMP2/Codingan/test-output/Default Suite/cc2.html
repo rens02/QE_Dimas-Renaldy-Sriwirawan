@@ -1,0 +1,1802 @@
+<html>
+<head>
+<title>TestNG:  cc2</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>cc2</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>29/15/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Apr 16 04:44:54 WIB 2023</td>
+</tr>
+<tr><td>Total time:</td><td>34 seconds (34033 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='user.SortUserNegative()'><b>SortUserNegative</b><br>Test class: user</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty array
+  Actual: [{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;-37.3159&quot;,&quot;long&quot;:&quot;81.1496&quot;},&quot;city&quot;:&quot;kilcoole&quot;,&quot;street&quot;:&quot;new road&quot;,&quot;number&quot;:7682,&quot;zipcode&quot;:&quot;12926-3874&quot;},&quot;id&quot;:1,&quot;email&quot;:&quot;john@gmail.com&quot;,&quot;username&quot;:&quot;johnd&quot;,&quot;password&quot;:&quot;m38rmF$&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;john&quot;,&quot;lastname&quot;:&quot;doe&quot;},&quot;phone&quot;:&quot;1-570-236-7033&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;-37.3159&quot;,&quot;long&quot;:&quot;81.1496&quot;},&quot;city&quot;:&quot;kilcoole&quot;,&quot;street&quot;:&quot;Lovers Ln&quot;,&quot;number&quot;:7267,&quot;zipcode&quot;:&quot;12926-3874&quot;},&quot;id&quot;:2,&quot;email&quot;:&quot;morrison@gmail.com&quot;,&quot;username&quot;:&quot;mor_2314&quot;,&quot;password&quot;:&quot;83r5^_&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;david&quot;,&quot;lastname&quot;:&quot;morrison&quot;},&quot;phone&quot;:&quot;1-570-236-7033&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;40.3467&quot;,&quot;long&quot;:&quot;-30.1310&quot;},&quot;city&quot;:&quot;Cullman&quot;,&quot;street&quot;:&quot;Frances Ct&quot;,&quot;number&quot;:86,&quot;zipcode&quot;:&quot;29567-1452&quot;},&quot;id&quot;:3,&quot;email&quot;:&quot;kevin@gmail.com&quot;,&quot;username&quot;:&quot;kevinryan&quot;,&quot;password&quot;:&quot;kev02937@&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;kevin&quot;,&quot;lastname&quot;:&quot;ryan&quot;},&quot;phone&quot;:&quot;1-567-094-1345&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;50.3467&quot;,&quot;long&quot;:&quot;-20.1310&quot;},&quot;city&quot;:&quot;San Antonio&quot;,&quot;street&quot;:&quot;Hunters Creek Dr&quot;,&quot;number&quot;:6454,&quot;zipcode&quot;:&quot;98234-1734&quot;},&quot;id&quot;:4,&quot;email&quot;:&quot;don@gmail.com&quot;,&quot;username&quot;:&quot;donero&quot;,&quot;password&quot;:&quot;ewedon&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;don&quot;,&quot;lastname&quot;:&quot;romer&quot;},&quot;phone&quot;:&quot;1-765-789-6734&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;40.3467&quot;,&quot;long&quot;:&quot;-40.1310&quot;},&quot;city&quot;:&quot;san Antonio&quot;,&quot;street&quot;:&quot;adams St&quot;,&quot;number&quot;:245,&quot;zipcode&quot;:&quot;80796-1234&quot;},&quot;id&quot;:5,&quot;email&quot;:&quot;derek@gmail.com&quot;,&quot;username&quot;:&quot;derek&quot;,&quot;password&quot;:&quot;jklg*_56&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;derek&quot;,&quot;lastname&quot;:&quot;powell&quot;},&quot;phone&quot;:&quot;1-956-001-1945&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;20.1677&quot;,&quot;long&quot;:&quot;-10.6789&quot;},&quot;city&quot;:&quot;el paso&quot;,&quot;street&quot;:&quot;prospect st&quot;,&quot;number&quot;:124,&quot;zipcode&quot;:&quot;12346-0456&quot;},&quot;id&quot;:6,&quot;email&quot;:&quot;david_r@gmail.com&quot;,&quot;username&quot;:&quot;david_r&quot;,&quot;password&quot;:&quot;3478*#54&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;david&quot;,&quot;lastname&quot;:&quot;russell&quot;},&quot;phone&quot;:&quot;1-678-345-9856&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;10.3456&quot;,&quot;long&quot;:&quot;20.6419&quot;},&quot;city&quot;:&quot;fresno&quot;,&quot;street&quot;:&quot;saddle st&quot;,&quot;number&quot;:1342,&quot;zipcode&quot;:&quot;96378-0245&quot;},&quot;id&quot;:7,&quot;email&quot;:&quot;miriam@gmail.com&quot;,&quot;username&quot;:&quot;snyder&quot;,&quot;password&quot;:&quot;f238&amp;@*$&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;miriam&quot;,&quot;lastname&quot;:&quot;snyder&quot;},&quot;phone&quot;:&quot;1-123-943-0563&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;50.3456&quot;,&quot;long&quot;:&quot;10.6419&quot;},&quot;city&quot;:&quot;mesa&quot;,&quot;street&quot;:&quot;vally view ln&quot;,&quot;number&quot;:1342,&quot;zipcode&quot;:&quot;96378-0245&quot;},&quot;id&quot;:8,&quot;email&quot;:&quot;william@gmail.com&quot;,&quot;username&quot;:&quot;hopkins&quot;,&quot;password&quot;:&quot;William56$hj&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;william&quot;,&quot;lastname&quot;:&quot;hopkins&quot;},&quot;phone&quot;:&quot;1-478-001-0890&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;40.12456&quot;,&quot;long&quot;:&quot;20.5419&quot;},&quot;city&quot;:&quot;miami&quot;,&quot;street&quot;:&quot;avondale ave&quot;,&quot;number&quot;:345,&quot;zipcode&quot;:&quot;96378-0245&quot;},&quot;id&quot;:9,&quot;email&quot;:&quot;kate@gmail.com&quot;,&quot;username&quot;:&quot;kate_h&quot;,&quot;password&quot;:&quot;kfejk@*_&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;kate&quot;,&quot;lastname&quot;:&quot;hale&quot;},&quot;phone&quot;:&quot;1-678-456-1934&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;30.24788&quot;,&quot;long&quot;:&quot;-20.545419&quot;},&quot;city&quot;:&quot;fort wayne&quot;,&quot;street&quot;:&quot;oak lawn ave&quot;,&quot;number&quot;:526,&quot;zipcode&quot;:&quot;10256-4532&quot;},&quot;id&quot;:10,&quot;email&quot;:&quot;jimmie@gmail.com&quot;,&quot;username&quot;:&quot;jimmie_k&quot;,&quot;password&quot;:&quot;klein*#%*&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;jimmie&quot;,&quot;lastname&quot;:&quot;klein&quot;},&quot;phone&quot;:&quot;1-104-001-4567&quot;,&quot;__v&quot;:0}]
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at user.SortUserNegative(user.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace688197093", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace688197093'><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty array
+  Actual: [{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;-37.3159&quot;,&quot;long&quot;:&quot;81.1496&quot;},&quot;city&quot;:&quot;kilcoole&quot;,&quot;street&quot;:&quot;new road&quot;,&quot;number&quot;:7682,&quot;zipcode&quot;:&quot;12926-3874&quot;},&quot;id&quot;:1,&quot;email&quot;:&quot;john@gmail.com&quot;,&quot;username&quot;:&quot;johnd&quot;,&quot;password&quot;:&quot;m38rmF$&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;john&quot;,&quot;lastname&quot;:&quot;doe&quot;},&quot;phone&quot;:&quot;1-570-236-7033&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;-37.3159&quot;,&quot;long&quot;:&quot;81.1496&quot;},&quot;city&quot;:&quot;kilcoole&quot;,&quot;street&quot;:&quot;Lovers Ln&quot;,&quot;number&quot;:7267,&quot;zipcode&quot;:&quot;12926-3874&quot;},&quot;id&quot;:2,&quot;email&quot;:&quot;morrison@gmail.com&quot;,&quot;username&quot;:&quot;mor_2314&quot;,&quot;password&quot;:&quot;83r5^_&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;david&quot;,&quot;lastname&quot;:&quot;morrison&quot;},&quot;phone&quot;:&quot;1-570-236-7033&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;40.3467&quot;,&quot;long&quot;:&quot;-30.1310&quot;},&quot;city&quot;:&quot;Cullman&quot;,&quot;street&quot;:&quot;Frances Ct&quot;,&quot;number&quot;:86,&quot;zipcode&quot;:&quot;29567-1452&quot;},&quot;id&quot;:3,&quot;email&quot;:&quot;kevin@gmail.com&quot;,&quot;username&quot;:&quot;kevinryan&quot;,&quot;password&quot;:&quot;kev02937@&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;kevin&quot;,&quot;lastname&quot;:&quot;ryan&quot;},&quot;phone&quot;:&quot;1-567-094-1345&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;50.3467&quot;,&quot;long&quot;:&quot;-20.1310&quot;},&quot;city&quot;:&quot;San Antonio&quot;,&quot;street&quot;:&quot;Hunters Creek Dr&quot;,&quot;number&quot;:6454,&quot;zipcode&quot;:&quot;98234-1734&quot;},&quot;id&quot;:4,&quot;email&quot;:&quot;don@gmail.com&quot;,&quot;username&quot;:&quot;donero&quot;,&quot;password&quot;:&quot;ewedon&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;don&quot;,&quot;lastname&quot;:&quot;romer&quot;},&quot;phone&quot;:&quot;1-765-789-6734&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;40.3467&quot;,&quot;long&quot;:&quot;-40.1310&quot;},&quot;city&quot;:&quot;san Antonio&quot;,&quot;street&quot;:&quot;adams St&quot;,&quot;number&quot;:245,&quot;zipcode&quot;:&quot;80796-1234&quot;},&quot;id&quot;:5,&quot;email&quot;:&quot;derek@gmail.com&quot;,&quot;username&quot;:&quot;derek&quot;,&quot;password&quot;:&quot;jklg*_56&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;derek&quot;,&quot;lastname&quot;:&quot;powell&quot;},&quot;phone&quot;:&quot;1-956-001-1945&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;20.1677&quot;,&quot;long&quot;:&quot;-10.6789&quot;},&quot;city&quot;:&quot;el paso&quot;,&quot;street&quot;:&quot;prospect st&quot;,&quot;number&quot;:124,&quot;zipcode&quot;:&quot;12346-0456&quot;},&quot;id&quot;:6,&quot;email&quot;:&quot;david_r@gmail.com&quot;,&quot;username&quot;:&quot;david_r&quot;,&quot;password&quot;:&quot;3478*#54&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;david&quot;,&quot;lastname&quot;:&quot;russell&quot;},&quot;phone&quot;:&quot;1-678-345-9856&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;10.3456&quot;,&quot;long&quot;:&quot;20.6419&quot;},&quot;city&quot;:&quot;fresno&quot;,&quot;street&quot;:&quot;saddle st&quot;,&quot;number&quot;:1342,&quot;zipcode&quot;:&quot;96378-0245&quot;},&quot;id&quot;:7,&quot;email&quot;:&quot;miriam@gmail.com&quot;,&quot;username&quot;:&quot;snyder&quot;,&quot;password&quot;:&quot;f238&amp;@*$&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;miriam&quot;,&quot;lastname&quot;:&quot;snyder&quot;},&quot;phone&quot;:&quot;1-123-943-0563&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;50.3456&quot;,&quot;long&quot;:&quot;10.6419&quot;},&quot;city&quot;:&quot;mesa&quot;,&quot;street&quot;:&quot;vally view ln&quot;,&quot;number&quot;:1342,&quot;zipcode&quot;:&quot;96378-0245&quot;},&quot;id&quot;:8,&quot;email&quot;:&quot;william@gmail.com&quot;,&quot;username&quot;:&quot;hopkins&quot;,&quot;password&quot;:&quot;William56$hj&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;william&quot;,&quot;lastname&quot;:&quot;hopkins&quot;},&quot;phone&quot;:&quot;1-478-001-0890&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;40.12456&quot;,&quot;long&quot;:&quot;20.5419&quot;},&quot;city&quot;:&quot;miami&quot;,&quot;street&quot;:&quot;avondale ave&quot;,&quot;number&quot;:345,&quot;zipcode&quot;:&quot;96378-0245&quot;},&quot;id&quot;:9,&quot;email&quot;:&quot;kate@gmail.com&quot;,&quot;username&quot;:&quot;kate_h&quot;,&quot;password&quot;:&quot;kfejk@*_&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;kate&quot;,&quot;lastname&quot;:&quot;hale&quot;},&quot;phone&quot;:&quot;1-678-456-1934&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;30.24788&quot;,&quot;long&quot;:&quot;-20.545419&quot;},&quot;city&quot;:&quot;fort wayne&quot;,&quot;street&quot;:&quot;oak lawn ave&quot;,&quot;number&quot;:526,&quot;zipcode&quot;:&quot;10256-4532&quot;},&quot;id&quot;:10,&quot;email&quot;:&quot;jimmie@gmail.com&quot;,&quot;username&quot;:&quot;jimmie_k&quot;,&quot;password&quot;:&quot;klein*#%*&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;jimmie&quot;,&quot;lastname&quot;:&quot;klein&quot;},&quot;phone&quot;:&quot;1-104-001-4567&quot;,&quot;__v&quot;:0}]
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at user.SortUserNegative(user.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>user@1dd02175</td></tr>
+<tr>
+<td title='cart.UpdateCartNegative()'><b>UpdateCartNegative</b><br>Test class: cart</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at cart.UpdateCartNegative(cart.java:197)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace287056540", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace287056540'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at cart.UpdateCartNegative(cart.java:197)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='user.PutUserPositive()'><b>PutUserPositive</b><br>Test class: user</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path id doesn&apos;t match.
+Expected: &lt;7&gt;
+  Actual: null
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)
+	at io.restassured.specification.ResponseSpecification$body$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at user.PutUserPositive(user.java:135)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace548108014", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace548108014'><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path id doesn&apos;t match.
+Expected: &lt;7&gt;
+  Actual: null
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)
+	at io.restassured.specification.ResponseSpecification$body$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at user.PutUserPositive(user.java:135)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>user@1dd02175</td></tr>
+<tr>
+<td title='cart.SortcartNegative()'><b>SortcartNegative</b><br>Test class: cart</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty array
+  Actual: [{&quot;id&quot;:1,&quot;userId&quot;:1,&quot;date&quot;:&quot;2020-03-02T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:1,&quot;quantity&quot;:4},{&quot;productId&quot;:2,&quot;quantity&quot;:1},{&quot;productId&quot;:3,&quot;quantity&quot;:6}],&quot;__v&quot;:0},{&quot;id&quot;:2,&quot;userId&quot;:1,&quot;date&quot;:&quot;2020-01-02T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:2,&quot;quantity&quot;:4},{&quot;productId&quot;:1,&quot;quantity&quot;:10},{&quot;productId&quot;:5,&quot;quantity&quot;:2}],&quot;__v&quot;:0},{&quot;id&quot;:3,&quot;userId&quot;:2,&quot;date&quot;:&quot;2020-03-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:1,&quot;quantity&quot;:2},{&quot;productId&quot;:9,&quot;quantity&quot;:1}],&quot;__v&quot;:0},{&quot;id&quot;:4,&quot;userId&quot;:3,&quot;date&quot;:&quot;2020-01-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:1,&quot;quantity&quot;:4}],&quot;__v&quot;:0},{&quot;id&quot;:5,&quot;userId&quot;:3,&quot;date&quot;:&quot;2020-03-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:7,&quot;quantity&quot;:1},{&quot;productId&quot;:8,&quot;quantity&quot;:1}],&quot;__v&quot;:0},{&quot;id&quot;:6,&quot;userId&quot;:4,&quot;date&quot;:&quot;2020-03-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:10,&quot;quantity&quot;:2},{&quot;productId&quot;:12,&quot;quantity&quot;:3}],&quot;__v&quot;:0},{&quot;id&quot;:7,&quot;userId&quot;:8,&quot;date&quot;:&quot;2020-03-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:18,&quot;quantity&quot;:1}],&quot;__v&quot;:0}]
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at cart.SortcartNegative(cart.java:72)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1658064433", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1658064433'><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty array
+  Actual: [{&quot;id&quot;:1,&quot;userId&quot;:1,&quot;date&quot;:&quot;2020-03-02T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:1,&quot;quantity&quot;:4},{&quot;productId&quot;:2,&quot;quantity&quot;:1},{&quot;productId&quot;:3,&quot;quantity&quot;:6}],&quot;__v&quot;:0},{&quot;id&quot;:2,&quot;userId&quot;:1,&quot;date&quot;:&quot;2020-01-02T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:2,&quot;quantity&quot;:4},{&quot;productId&quot;:1,&quot;quantity&quot;:10},{&quot;productId&quot;:5,&quot;quantity&quot;:2}],&quot;__v&quot;:0},{&quot;id&quot;:3,&quot;userId&quot;:2,&quot;date&quot;:&quot;2020-03-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:1,&quot;quantity&quot;:2},{&quot;productId&quot;:9,&quot;quantity&quot;:1}],&quot;__v&quot;:0},{&quot;id&quot;:4,&quot;userId&quot;:3,&quot;date&quot;:&quot;2020-01-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:1,&quot;quantity&quot;:4}],&quot;__v&quot;:0},{&quot;id&quot;:5,&quot;userId&quot;:3,&quot;date&quot;:&quot;2020-03-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:7,&quot;quantity&quot;:1},{&quot;productId&quot;:8,&quot;quantity&quot;:1}],&quot;__v&quot;:0},{&quot;id&quot;:6,&quot;userId&quot;:4,&quot;date&quot;:&quot;2020-03-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:10,&quot;quantity&quot;:2},{&quot;productId&quot;:12,&quot;quantity&quot;:3}],&quot;__v&quot;:0},{&quot;id&quot;:7,&quot;userId&quot;:8,&quot;date&quot;:&quot;2020-03-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:18,&quot;quantity&quot;:1}],&quot;__v&quot;:0}]
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at cart.SortcartNegative(cart.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='cart.SpecificcartNegative()'><b>SpecificcartNegative</b><br>Test class: cart</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: null
+  Actual: null
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at cart.SpecificcartNegative(cart.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1677857831", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1677857831'><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: null
+  Actual: null
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at cart.SpecificcartNegative(cart.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='cart.UserCartPostive()'><b>UserCartPostive</b><br>Test class: cart</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at cart.UserCartPostive(cart.java:102)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1138190994", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1138190994'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at cart.UserCartPostive(cart.java:102)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='user.AddUserPositive()'><b>AddUserPositive</b><br>Test class: user</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path id doesn&apos;t match.
+Expected: &lt;21&gt;
+  Actual: &lt;11&gt;
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)
+	at io.restassured.specification.ResponseSpecification$body$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:212)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at user.AddUserPositive(user.java:109)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace849776463", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace849776463'><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path id doesn&apos;t match.
+Expected: &lt;21&gt;
+  Actual: &lt;11&gt;
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)
+	at io.restassured.specification.ResponseSpecification$body$0.callCurrent(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:212)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at user.AddUserPositive(user.java:109)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>2</td>
+<td>user@1dd02175</td></tr>
+<tr>
+<td title='product.LimitProductNegative()'><b>LimitProductNegative</b><br>Test class: product</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty string
+  Actual: [{&quot;id&quot;:1,&quot;title&quot;:&quot;Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops&quot;,&quot;price&quot;:109.95,&quot;description&quot;:&quot;Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.9,&quot;count&quot;:120}},{&quot;id&quot;:2,&quot;title&quot;:&quot;Mens Casual Premium Slim Fit T-Shirts &quot;,&quot;price&quot;:22.3,&quot;description&quot;:&quot;Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.1,&quot;count&quot;:259}},{&quot;id&quot;:3,&quot;title&quot;:&quot;Mens Cotton Jacket&quot;,&quot;price&quot;:55.99,&quot;description&quot;:&quot;great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.7,&quot;count&quot;:500}},{&quot;id&quot;:4,&quot;title&quot;:&quot;Mens Casual Slim Fit&quot;,&quot;price&quot;:15.99,&quot;description&quot;:&quot;The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.1,&quot;count&quot;:430}},{&quot;id&quot;:5,&quot;title&quot;:&quot;John Hardy Women&apos;s Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet&quot;,&quot;price&quot;:695,&quot;description&quot;:&quot;From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean&apos;s pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.6,&quot;count&quot;:400}},{&quot;id&quot;:6,&quot;title&quot;:&quot;Solid Gold Petite Micropave &quot;,&quot;price&quot;:168,&quot;description&quot;:&quot;Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.9,&quot;count&quot;:70}},{&quot;id&quot;:7,&quot;title&quot;:&quot;White Gold Plated Princess&quot;,&quot;price&quot;:9.99,&quot;description&quot;:&quot;Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine&apos;s Day...&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3,&quot;count&quot;:400}},{&quot;id&quot;:8,&quot;title&quot;:&quot;Pierced Owl Rose Gold Plated Stainless Steel Double&quot;,&quot;price&quot;:10.99,&quot;description&quot;:&quot;Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:1.9,&quot;count&quot;:100}},{&quot;id&quot;:9,&quot;title&quot;:&quot;WD 2TB Elements Portable External Hard Drive - USB 3.0 &quot;,&quot;price&quot;:64,&quot;description&quot;:&quot;USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.3,&quot;count&quot;:203}},{&quot;id&quot;:10,&quot;title&quot;:&quot;SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s&quot;,&quot;price&quot;:109,&quot;description&quot;:&quot;Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.9,&quot;count&quot;:470}},{&quot;id&quot;:11,&quot;title&quot;:&quot;Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5&quot;,&quot;price&quot;:109,&quot;description&quot;:&quot;3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking &amp; Correction) to provide the optimized performance and enhanced reliability.&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.8,&quot;count&quot;:319}},{&quot;id&quot;:12,&quot;title&quot;:&quot;WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive&quot;,&quot;price&quot;:114,&quot;description&quot;:&quot;Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer&apos;s limited warranty&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.8,&quot;count&quot;:400}},{&quot;id&quot;:13,&quot;title&quot;:&quot;Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin&quot;,&quot;price&quot;:599,&quot;description&quot;:&quot;21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.9,&quot;count&quot;:250}},{&quot;id&quot;:14,&quot;title&quot;:&quot;Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED &quot;,&quot;price&quot;:999.99,&quot;description&quot;:&quot;49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.2,&quot;count&quot;:140}},{&quot;id&quot;:15,&quot;title&quot;:&quot;BIYLACLESEN Women&apos;s 3-in-1 Snowboard Jacket Winter Coats&quot;,&quot;price&quot;:56.99,&quot;description&quot;:&quot;Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.6,&quot;count&quot;:235}}]
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at product.LimitProductNegative(product.java:49)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace725884502", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace725884502'><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty string
+  Actual: [{&quot;id&quot;:1,&quot;title&quot;:&quot;Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops&quot;,&quot;price&quot;:109.95,&quot;description&quot;:&quot;Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.9,&quot;count&quot;:120}},{&quot;id&quot;:2,&quot;title&quot;:&quot;Mens Casual Premium Slim Fit T-Shirts &quot;,&quot;price&quot;:22.3,&quot;description&quot;:&quot;Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.1,&quot;count&quot;:259}},{&quot;id&quot;:3,&quot;title&quot;:&quot;Mens Cotton Jacket&quot;,&quot;price&quot;:55.99,&quot;description&quot;:&quot;great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.7,&quot;count&quot;:500}},{&quot;id&quot;:4,&quot;title&quot;:&quot;Mens Casual Slim Fit&quot;,&quot;price&quot;:15.99,&quot;description&quot;:&quot;The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.1,&quot;count&quot;:430}},{&quot;id&quot;:5,&quot;title&quot;:&quot;John Hardy Women&apos;s Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet&quot;,&quot;price&quot;:695,&quot;description&quot;:&quot;From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean&apos;s pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.6,&quot;count&quot;:400}},{&quot;id&quot;:6,&quot;title&quot;:&quot;Solid Gold Petite Micropave &quot;,&quot;price&quot;:168,&quot;description&quot;:&quot;Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.9,&quot;count&quot;:70}},{&quot;id&quot;:7,&quot;title&quot;:&quot;White Gold Plated Princess&quot;,&quot;price&quot;:9.99,&quot;description&quot;:&quot;Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine&apos;s Day...&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3,&quot;count&quot;:400}},{&quot;id&quot;:8,&quot;title&quot;:&quot;Pierced Owl Rose Gold Plated Stainless Steel Double&quot;,&quot;price&quot;:10.99,&quot;description&quot;:&quot;Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:1.9,&quot;count&quot;:100}},{&quot;id&quot;:9,&quot;title&quot;:&quot;WD 2TB Elements Portable External Hard Drive - USB 3.0 &quot;,&quot;price&quot;:64,&quot;description&quot;:&quot;USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.3,&quot;count&quot;:203}},{&quot;id&quot;:10,&quot;title&quot;:&quot;SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s&quot;,&quot;price&quot;:109,&quot;description&quot;:&quot;Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.9,&quot;count&quot;:470}},{&quot;id&quot;:11,&quot;title&quot;:&quot;Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5&quot;,&quot;price&quot;:109,&quot;description&quot;:&quot;3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking &amp; Correction) to provide the optimized performance and enhanced reliability.&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.8,&quot;count&quot;:319}},{&quot;id&quot;:12,&quot;title&quot;:&quot;WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive&quot;,&quot;price&quot;:114,&quot;description&quot;:&quot;Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer&apos;s limited warranty&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.8,&quot;count&quot;:400}},{&quot;id&quot;:13,&quot;title&quot;:&quot;Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin&quot;,&quot;price&quot;:599,&quot;description&quot;:&quot;21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.9,&quot;count&quot;:250}},{&quot;id&quot;:14,&quot;title&quot;:&quot;Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED &quot;,&quot;price&quot;:999.99,&quot;description&quot;:&quot;49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.2,&quot;count&quot;:140}},{&quot;id&quot;:15,&quot;title&quot;:&quot;BIYLACLESEN Women&apos;s 3-in-1 Snowboard Jacket Winter Coats&quot;,&quot;price&quot;:56.99,&quot;description&quot;:&quot;Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.6,&quot;count&quot;:235}}]
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at product.LimitProductNegative(product.java:49)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='product.UpdateProductNegative()'><b>UpdateProductNegative</b><br>Test class: product</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty string
+  Actual: {&quot;id&quot;:-7,&quot;title&quot;:&quot;test product&quot;,&quot;price&quot;:-13.5,&quot;description&quot;:&quot;lorem ipsum set&quot;,&quot;image&quot;:&quot;ampuh&quot;,&quot;category&quot;:&quot;electronic&quot;}
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at product.UpdateProductNegative(product.java:188)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace362367755", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace362367755'><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty string
+  Actual: {&quot;id&quot;:-7,&quot;title&quot;:&quot;test product&quot;,&quot;price&quot;:-13.5,&quot;description&quot;:&quot;lorem ipsum set&quot;,&quot;image&quot;:&quot;ampuh&quot;,&quot;category&quot;:&quot;electronic&quot;}
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at product.UpdateProductNegative(product.java:188)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='product.AddProductNegative()'><b>AddProductNegative</b><br>Test class: product</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path category doesn&apos;t match.
+Expected: electronic
+  Actual: electronics64
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)
+	at io.restassured.specification.ResponseSpecification$body$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at product.AddProductNegative(product.java:143)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace502863983", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace502863983'><pre>java.lang.AssertionError: 1 expectation failed.
+JSON path category doesn&apos;t match.
+Expected: electronic
+  Actual: electronics64
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)
+	at io.restassured.specification.ResponseSpecification$body$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at product.AddProductNegative(product.java:143)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='user.LimitUserNegative()'><b>LimitUserNegative</b><br>Test class: user</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty string
+  Actual: [{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;-37.3159&quot;,&quot;long&quot;:&quot;81.1496&quot;},&quot;city&quot;:&quot;kilcoole&quot;,&quot;street&quot;:&quot;new road&quot;,&quot;number&quot;:7682,&quot;zipcode&quot;:&quot;12926-3874&quot;},&quot;id&quot;:1,&quot;email&quot;:&quot;john@gmail.com&quot;,&quot;username&quot;:&quot;johnd&quot;,&quot;password&quot;:&quot;m38rmF$&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;john&quot;,&quot;lastname&quot;:&quot;doe&quot;},&quot;phone&quot;:&quot;1-570-236-7033&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;-37.3159&quot;,&quot;long&quot;:&quot;81.1496&quot;},&quot;city&quot;:&quot;kilcoole&quot;,&quot;street&quot;:&quot;Lovers Ln&quot;,&quot;number&quot;:7267,&quot;zipcode&quot;:&quot;12926-3874&quot;},&quot;id&quot;:2,&quot;email&quot;:&quot;morrison@gmail.com&quot;,&quot;username&quot;:&quot;mor_2314&quot;,&quot;password&quot;:&quot;83r5^_&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;david&quot;,&quot;lastname&quot;:&quot;morrison&quot;},&quot;phone&quot;:&quot;1-570-236-7033&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;40.3467&quot;,&quot;long&quot;:&quot;-30.1310&quot;},&quot;city&quot;:&quot;Cullman&quot;,&quot;street&quot;:&quot;Frances Ct&quot;,&quot;number&quot;:86,&quot;zipcode&quot;:&quot;29567-1452&quot;},&quot;id&quot;:3,&quot;email&quot;:&quot;kevin@gmail.com&quot;,&quot;username&quot;:&quot;kevinryan&quot;,&quot;password&quot;:&quot;kev02937@&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;kevin&quot;,&quot;lastname&quot;:&quot;ryan&quot;},&quot;phone&quot;:&quot;1-567-094-1345&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;50.3467&quot;,&quot;long&quot;:&quot;-20.1310&quot;},&quot;city&quot;:&quot;San Antonio&quot;,&quot;street&quot;:&quot;Hunters Creek Dr&quot;,&quot;number&quot;:6454,&quot;zipcode&quot;:&quot;98234-1734&quot;},&quot;id&quot;:4,&quot;email&quot;:&quot;don@gmail.com&quot;,&quot;username&quot;:&quot;donero&quot;,&quot;password&quot;:&quot;ewedon&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;don&quot;,&quot;lastname&quot;:&quot;romer&quot;},&quot;phone&quot;:&quot;1-765-789-6734&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;40.3467&quot;,&quot;long&quot;:&quot;-40.1310&quot;},&quot;city&quot;:&quot;san Antonio&quot;,&quot;street&quot;:&quot;adams St&quot;,&quot;number&quot;:245,&quot;zipcode&quot;:&quot;80796-1234&quot;},&quot;id&quot;:5,&quot;email&quot;:&quot;derek@gmail.com&quot;,&quot;username&quot;:&quot;derek&quot;,&quot;password&quot;:&quot;jklg*_56&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;derek&quot;,&quot;lastname&quot;:&quot;powell&quot;},&quot;phone&quot;:&quot;1-956-001-1945&quot;,&quot;__v&quot;:0}]
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at user.LimitUserNegative(user.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace766722027", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace766722027'><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty string
+  Actual: [{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;-37.3159&quot;,&quot;long&quot;:&quot;81.1496&quot;},&quot;city&quot;:&quot;kilcoole&quot;,&quot;street&quot;:&quot;new road&quot;,&quot;number&quot;:7682,&quot;zipcode&quot;:&quot;12926-3874&quot;},&quot;id&quot;:1,&quot;email&quot;:&quot;john@gmail.com&quot;,&quot;username&quot;:&quot;johnd&quot;,&quot;password&quot;:&quot;m38rmF$&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;john&quot;,&quot;lastname&quot;:&quot;doe&quot;},&quot;phone&quot;:&quot;1-570-236-7033&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;-37.3159&quot;,&quot;long&quot;:&quot;81.1496&quot;},&quot;city&quot;:&quot;kilcoole&quot;,&quot;street&quot;:&quot;Lovers Ln&quot;,&quot;number&quot;:7267,&quot;zipcode&quot;:&quot;12926-3874&quot;},&quot;id&quot;:2,&quot;email&quot;:&quot;morrison@gmail.com&quot;,&quot;username&quot;:&quot;mor_2314&quot;,&quot;password&quot;:&quot;83r5^_&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;david&quot;,&quot;lastname&quot;:&quot;morrison&quot;},&quot;phone&quot;:&quot;1-570-236-7033&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;40.3467&quot;,&quot;long&quot;:&quot;-30.1310&quot;},&quot;city&quot;:&quot;Cullman&quot;,&quot;street&quot;:&quot;Frances Ct&quot;,&quot;number&quot;:86,&quot;zipcode&quot;:&quot;29567-1452&quot;},&quot;id&quot;:3,&quot;email&quot;:&quot;kevin@gmail.com&quot;,&quot;username&quot;:&quot;kevinryan&quot;,&quot;password&quot;:&quot;kev02937@&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;kevin&quot;,&quot;lastname&quot;:&quot;ryan&quot;},&quot;phone&quot;:&quot;1-567-094-1345&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;50.3467&quot;,&quot;long&quot;:&quot;-20.1310&quot;},&quot;city&quot;:&quot;San Antonio&quot;,&quot;street&quot;:&quot;Hunters Creek Dr&quot;,&quot;number&quot;:6454,&quot;zipcode&quot;:&quot;98234-1734&quot;},&quot;id&quot;:4,&quot;email&quot;:&quot;don@gmail.com&quot;,&quot;username&quot;:&quot;donero&quot;,&quot;password&quot;:&quot;ewedon&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;don&quot;,&quot;lastname&quot;:&quot;romer&quot;},&quot;phone&quot;:&quot;1-765-789-6734&quot;,&quot;__v&quot;:0},{&quot;address&quot;:{&quot;geolocation&quot;:{&quot;lat&quot;:&quot;40.3467&quot;,&quot;long&quot;:&quot;-40.1310&quot;},&quot;city&quot;:&quot;san Antonio&quot;,&quot;street&quot;:&quot;adams St&quot;,&quot;number&quot;:245,&quot;zipcode&quot;:&quot;80796-1234&quot;},&quot;id&quot;:5,&quot;email&quot;:&quot;derek@gmail.com&quot;,&quot;username&quot;:&quot;derek&quot;,&quot;password&quot;:&quot;jklg*_56&quot;,&quot;name&quot;:{&quot;firstname&quot;:&quot;derek&quot;,&quot;lastname&quot;:&quot;powell&quot;},&quot;phone&quot;:&quot;1-956-001-1945&quot;,&quot;__v&quot;:0}]
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at user.LimitUserNegative(user.java:54)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>user@1dd02175</td></tr>
+<tr>
+<td title='product.SortProductNegative()'><b>SortProductNegative</b><br>Test class: product</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty array
+  Actual: [{&quot;id&quot;:1,&quot;title&quot;:&quot;Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops&quot;,&quot;price&quot;:109.95,&quot;description&quot;:&quot;Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.9,&quot;count&quot;:120}},{&quot;id&quot;:2,&quot;title&quot;:&quot;Mens Casual Premium Slim Fit T-Shirts &quot;,&quot;price&quot;:22.3,&quot;description&quot;:&quot;Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.1,&quot;count&quot;:259}},{&quot;id&quot;:3,&quot;title&quot;:&quot;Mens Cotton Jacket&quot;,&quot;price&quot;:55.99,&quot;description&quot;:&quot;great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.7,&quot;count&quot;:500}},{&quot;id&quot;:4,&quot;title&quot;:&quot;Mens Casual Slim Fit&quot;,&quot;price&quot;:15.99,&quot;description&quot;:&quot;The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.1,&quot;count&quot;:430}},{&quot;id&quot;:5,&quot;title&quot;:&quot;John Hardy Women&apos;s Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet&quot;,&quot;price&quot;:695,&quot;description&quot;:&quot;From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean&apos;s pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.6,&quot;count&quot;:400}},{&quot;id&quot;:6,&quot;title&quot;:&quot;Solid Gold Petite Micropave &quot;,&quot;price&quot;:168,&quot;description&quot;:&quot;Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.9,&quot;count&quot;:70}},{&quot;id&quot;:7,&quot;title&quot;:&quot;White Gold Plated Princess&quot;,&quot;price&quot;:9.99,&quot;description&quot;:&quot;Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine&apos;s Day...&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3,&quot;count&quot;:400}},{&quot;id&quot;:8,&quot;title&quot;:&quot;Pierced Owl Rose Gold Plated Stainless Steel Double&quot;,&quot;price&quot;:10.99,&quot;description&quot;:&quot;Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:1.9,&quot;count&quot;:100}},{&quot;id&quot;:9,&quot;title&quot;:&quot;WD 2TB Elements Portable External Hard Drive - USB 3.0 &quot;,&quot;price&quot;:64,&quot;description&quot;:&quot;USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.3,&quot;count&quot;:203}},{&quot;id&quot;:10,&quot;title&quot;:&quot;SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s&quot;,&quot;price&quot;:109,&quot;description&quot;:&quot;Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.9,&quot;count&quot;:470}},{&quot;id&quot;:11,&quot;title&quot;:&quot;Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5&quot;,&quot;price&quot;:109,&quot;description&quot;:&quot;3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking &amp; Correction) to provide the optimized performance and enhanced reliability.&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.8,&quot;count&quot;:319}},{&quot;id&quot;:12,&quot;title&quot;:&quot;WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive&quot;,&quot;price&quot;:114,&quot;description&quot;:&quot;Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer&apos;s limited warranty&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.8,&quot;count&quot;:400}},{&quot;id&quot;:13,&quot;title&quot;:&quot;Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin&quot;,&quot;price&quot;:599,&quot;description&quot;:&quot;21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.9,&quot;count&quot;:250}},{&quot;id&quot;:14,&quot;title&quot;:&quot;Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED &quot;,&quot;price&quot;:999.99,&quot;description&quot;:&quot;49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.2,&quot;count&quot;:140}},{&quot;id&quot;:15,&quot;title&quot;:&quot;BIYLACLESEN Women&apos;s 3-in-1 Snowboard Jacket Winter Coats&quot;,&quot;price&quot;:56.99,&quot;description&quot;:&quot;Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.6,&quot;count&quot;:235}},{&quot;id&quot;:16,&quot;title&quot;:&quot;Lock and Love Women&apos;s Removable Hooded Faux Leather Moto Biker Jacket&quot;,&quot;price&quot;:29.95,&quot;description&quot;:&quot;100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.9,&quot;count&quot;:340}},{&quot;id&quot;:17,&quot;title&quot;:&quot;Rain Jacket Women Windbreaker Striped Climbing Raincoats&quot;,&quot;price&quot;:39.99,&quot;description&quot;:&quot;Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn&apos;t overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.8,&quot;count&quot;:679}},{&quot;id&quot;:18,&quot;title&quot;:&quot;MBJ Women&apos;s Solid Short Sleeve Boat Neck V &quot;,&quot;price&quot;:9.85,&quot;description&quot;:&quot;95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.7,&quot;count&quot;:130}},{&quot;id&quot;:19,&quot;title&quot;:&quot;Opna Women&apos;s Short Sleeve Moisture&quot;,&quot;price&quot;:7.95,&quot;description&quot;:&quot;100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash &amp; Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.5,&quot;count&quot;:146}},{&quot;id&quot;:20,&quot;title&quot;:&quot;DANVOUY Womens T Shirt Casual Cotton Short&quot;,&quot;price&quot;:12.99,&quot;description&quot;:&quot;95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.6,&quot;count&quot;:145}}]
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at product.SortProductNegative(product.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1619034073", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1619034073'><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty array
+  Actual: [{&quot;id&quot;:1,&quot;title&quot;:&quot;Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops&quot;,&quot;price&quot;:109.95,&quot;description&quot;:&quot;Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.9,&quot;count&quot;:120}},{&quot;id&quot;:2,&quot;title&quot;:&quot;Mens Casual Premium Slim Fit T-Shirts &quot;,&quot;price&quot;:22.3,&quot;description&quot;:&quot;Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight &amp; soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.1,&quot;count&quot;:259}},{&quot;id&quot;:3,&quot;title&quot;:&quot;Mens Cotton Jacket&quot;,&quot;price&quot;:55.99,&quot;description&quot;:&quot;great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.7,&quot;count&quot;:500}},{&quot;id&quot;:4,&quot;title&quot;:&quot;Mens Casual Slim Fit&quot;,&quot;price&quot;:15.99,&quot;description&quot;:&quot;The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.&quot;,&quot;category&quot;:&quot;men&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.1,&quot;count&quot;:430}},{&quot;id&quot;:5,&quot;title&quot;:&quot;John Hardy Women&apos;s Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet&quot;,&quot;price&quot;:695,&quot;description&quot;:&quot;From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean&apos;s pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.6,&quot;count&quot;:400}},{&quot;id&quot;:6,&quot;title&quot;:&quot;Solid Gold Petite Micropave &quot;,&quot;price&quot;:168,&quot;description&quot;:&quot;Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.9,&quot;count&quot;:70}},{&quot;id&quot;:7,&quot;title&quot;:&quot;White Gold Plated Princess&quot;,&quot;price&quot;:9.99,&quot;description&quot;:&quot;Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine&apos;s Day...&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3,&quot;count&quot;:400}},{&quot;id&quot;:8,&quot;title&quot;:&quot;Pierced Owl Rose Gold Plated Stainless Steel Double&quot;,&quot;price&quot;:10.99,&quot;description&quot;:&quot;Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel&quot;,&quot;category&quot;:&quot;jewelery&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:1.9,&quot;count&quot;:100}},{&quot;id&quot;:9,&quot;title&quot;:&quot;WD 2TB Elements Portable External Hard Drive - USB 3.0 &quot;,&quot;price&quot;:64,&quot;description&quot;:&quot;USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.3,&quot;count&quot;:203}},{&quot;id&quot;:10,&quot;title&quot;:&quot;SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s&quot;,&quot;price&quot;:109,&quot;description&quot;:&quot;Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.9,&quot;count&quot;:470}},{&quot;id&quot;:11,&quot;title&quot;:&quot;Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5&quot;,&quot;price&quot;:109,&quot;description&quot;:&quot;3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking &amp; Correction) to provide the optimized performance and enhanced reliability.&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.8,&quot;count&quot;:319}},{&quot;id&quot;:12,&quot;title&quot;:&quot;WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive&quot;,&quot;price&quot;:114,&quot;description&quot;:&quot;Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer&apos;s limited warranty&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.8,&quot;count&quot;:400}},{&quot;id&quot;:13,&quot;title&quot;:&quot;Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin&quot;,&quot;price&quot;:599,&quot;description&quot;:&quot;21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.9,&quot;count&quot;:250}},{&quot;id&quot;:14,&quot;title&quot;:&quot;Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED &quot;,&quot;price&quot;:999.99,&quot;description&quot;:&quot;49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag&quot;,&quot;category&quot;:&quot;electronics&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.2,&quot;count&quot;:140}},{&quot;id&quot;:15,&quot;title&quot;:&quot;BIYLACLESEN Women&apos;s 3-in-1 Snowboard Jacket Winter Coats&quot;,&quot;price&quot;:56.99,&quot;description&quot;:&quot;Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.6,&quot;count&quot;:235}},{&quot;id&quot;:16,&quot;title&quot;:&quot;Lock and Love Women&apos;s Removable Hooded Faux Leather Moto Biker Jacket&quot;,&quot;price&quot;:29.95,&quot;description&quot;:&quot;100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:2.9,&quot;count&quot;:340}},{&quot;id&quot;:17,&quot;title&quot;:&quot;Rain Jacket Women Windbreaker Striped Climbing Raincoats&quot;,&quot;price&quot;:39.99,&quot;description&quot;:&quot;Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn&apos;t overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.8,&quot;count&quot;:679}},{&quot;id&quot;:18,&quot;title&quot;:&quot;MBJ Women&apos;s Solid Short Sleeve Boat Neck V &quot;,&quot;price&quot;:9.85,&quot;description&quot;:&quot;95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.7,&quot;count&quot;:130}},{&quot;id&quot;:19,&quot;title&quot;:&quot;Opna Women&apos;s Short Sleeve Moisture&quot;,&quot;price&quot;:7.95,&quot;description&quot;:&quot;100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash &amp; Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:4.5,&quot;count&quot;:146}},{&quot;id&quot;:20,&quot;title&quot;:&quot;DANVOUY Womens T Shirt Casual Cotton Short&quot;,&quot;price&quot;:12.99,&quot;description&quot;:&quot;95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.&quot;,&quot;category&quot;:&quot;women&apos;s clothing&quot;,&quot;image&quot;:&quot;https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg&quot;,&quot;rating&quot;:{&quot;rate&quot;:3.6,&quot;count&quot;:145}}]
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at product.SortProductNegative(product.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='user.SpecificUserNegative()'><b>SpecificUserNegative</b><br>Test class: user</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: null
+  Actual: null
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at user.SpecificUserNegative(user.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1182888954", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1182888954'><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: null
+  Actual: null
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at user.SpecificUserNegative(user.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>user@1dd02175</td></tr>
+<tr>
+<td title='cart.AddCartNegative()'><b>AddCartNegative</b><br>Test class: cart</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at cart.AddCartNegative(cart.java:153)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace953683301", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace953683301'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)
+	at io.restassured.specification.ResponseSpecification$statusCode$1.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at cart.AddCartNegative(cart.java:153)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='cart.LimitcartNegative()'><b>LimitcartNegative</b><br>Test class: cart</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty string
+  Actual: [{&quot;id&quot;:1,&quot;userId&quot;:1,&quot;date&quot;:&quot;2020-03-02T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:1,&quot;quantity&quot;:4},{&quot;productId&quot;:2,&quot;quantity&quot;:1},{&quot;productId&quot;:3,&quot;quantity&quot;:6}],&quot;__v&quot;:0},{&quot;id&quot;:2,&quot;userId&quot;:1,&quot;date&quot;:&quot;2020-01-02T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:2,&quot;quantity&quot;:4},{&quot;productId&quot;:1,&quot;quantity&quot;:10},{&quot;productId&quot;:5,&quot;quantity&quot;:2}],&quot;__v&quot;:0},{&quot;id&quot;:3,&quot;userId&quot;:2,&quot;date&quot;:&quot;2020-03-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:1,&quot;quantity&quot;:2},{&quot;productId&quot;:9,&quot;quantity&quot;:1}],&quot;__v&quot;:0},{&quot;id&quot;:4,&quot;userId&quot;:3,&quot;date&quot;:&quot;2020-01-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:1,&quot;quantity&quot;:4}],&quot;__v&quot;:0},{&quot;id&quot;:5,&quot;userId&quot;:3,&quot;date&quot;:&quot;2020-03-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:7,&quot;quantity&quot;:1},{&quot;productId&quot;:8,&quot;quantity&quot;:1}],&quot;__v&quot;:0}]
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at cart.LimitcartNegative(cart.java:55)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1021311233", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1021311233'><pre>java.lang.AssertionError: 1 expectation failed.
+Response body doesn&apos;t match expectation.
+Expected: an empty string
+  Actual: [{&quot;id&quot;:1,&quot;userId&quot;:1,&quot;date&quot;:&quot;2020-03-02T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:1,&quot;quantity&quot;:4},{&quot;productId&quot;:2,&quot;quantity&quot;:1},{&quot;productId&quot;:3,&quot;quantity&quot;:6}],&quot;__v&quot;:0},{&quot;id&quot;:2,&quot;userId&quot;:1,&quot;date&quot;:&quot;2020-01-02T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:2,&quot;quantity&quot;:4},{&quot;productId&quot;:1,&quot;quantity&quot;:10},{&quot;productId&quot;:5,&quot;quantity&quot;:2}],&quot;__v&quot;:0},{&quot;id&quot;:3,&quot;userId&quot;:2,&quot;date&quot;:&quot;2020-03-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:1,&quot;quantity&quot;:2},{&quot;productId&quot;:9,&quot;quantity&quot;:1}],&quot;__v&quot;:0},{&quot;id&quot;:4,&quot;userId&quot;:3,&quot;date&quot;:&quot;2020-01-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:1,&quot;quantity&quot;:4}],&quot;__v&quot;:0},{&quot;id&quot;:5,&quot;userId&quot;:3,&quot;date&quot;:&quot;2020-03-01T00:00:00.000Z&quot;,&quot;products&quot;:[{&quot;productId&quot;:7,&quot;quantity&quot;:1},{&quot;productId&quot;:8,&quot;quantity&quot;:1}],&quot;__v&quot;:0}]
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+	at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+	at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+	at cart.LimitcartNegative(cart.java:55)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='cart.SortcartPostive()'><b>SortcartPostive</b><br>Test class: cart<br/>
+<a href="#Output-224286556" onClick='toggleBox("Output-224286556", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-224286556" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-224286556">
+ID starts at 7 (the bottom list instead of the top)<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='user.AllUserPositive()'><b>AllUserPositive</b><br>Test class: user<br/>
+<a href="#Output-613017674" onClick='toggleBox("Output-613017674", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-613017674" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-613017674">
+passed because status code = 200 ,first username is johnd, and size is 10<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>user@1dd02175</td></tr>
+<tr>
+<td title='user.LimitUserPositive()'><b>LimitUserPositive</b><br>Test class: user<br/>
+<a href="#Output-531576940" onClick='toggleBox("Output-531576940", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-531576940" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-531576940">
+passed because array 5 has nothing (no id)<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>user@1dd02175</td></tr>
+<tr>
+<td title='login.LoginPositive()'><b>LoginPositive</b><br>Test class: login<br/>
+<a href="#Output-480645280" onClick='toggleBox("Output-480645280", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-480645280" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-480645280">
+passed because token contain eyJhbGciOiJIUzI1NiIsInR<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>login@1372ed45</td></tr>
+<tr>
+<td title='cart.CartDateNegative()'><b>CartDateNegative</b><br>Test class: cart<br/>
+<a href="#Output-2143108725" onClick='toggleBox("Output-2143108725", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2143108725" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2143108725">
+passed because shown code 400 and status error<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='product.specificCategoryProductNegative()'><b>specificCategoryProductNegative</b><br>Test class: product<br/>
+<a href="#Output-1474607212" onClick='toggleBox("Output-1474607212", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1474607212" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1474607212">
+passed because empty<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='cart.LimitcartPositive()'><b>LimitcartPositive</b><br>Test class: cart<br/>
+<a href="#Output-703841336" onClick='toggleBox("Output-703841336", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-703841336" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-703841336">
+passed because array 5 has nothing (no id)<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='cart.AddCartPostive()'><b>AddCartPostive</b><br>Test class: cart<br/>
+<a href="#Output-900593187" onClick='toggleBox("Output-900593187", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-900593187" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-900593187">
+passed because userID 5 is added<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='product.specificCategoryProductPostive()'><b>specificCategoryProductPostive</b><br>Test class: product<br/>
+<a href="#Output-804153761" onClick='toggleBox("Output-804153761", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-804153761" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-804153761">
+passed because category is jewelery<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='cart.UpdateCartPositive()'><b>UpdateCartPositive</b><br>Test class: cart<br/>
+<a href="#Output-2065196426" onClick='toggleBox("Output-2065196426", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2065196426" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2065196426">
+passed because edited<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='cart.UserCartNegative()'><b>UserCartNegative</b><br>Test class: cart<br/>
+<a href="#Output-890085657" onClick='toggleBox("Output-890085657", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-890085657" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-890085657">
+passed because status code 400 (error)<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='cart.DeleteCartPositive()'><b>DeleteCartPositive</b><br>Test class: cart<br/>
+<a href="#Output-893339434" onClick='toggleBox("Output-893339434", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-893339434" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-893339434">
+Passed if return the product as in the test documentation said<br/>
+The product will not be deleted on the database. but if you sent data successfully it will return you the fake deleted product.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='product.SortProductPostive()'><b>SortProductPostive</b><br>Test class: product<br/>
+<a href="#Output-1134505351" onClick='toggleBox("Output-1134505351", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1134505351" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1134505351">
+ID starts at 20 (the bottom list instead of the top)<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='user.SortUserPostive()'><b>SortUserPostive</b><br>Test class: user<br/>
+<a href="#Output-1677309282" onClick='toggleBox("Output-1677309282", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1677309282" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1677309282">
+ID starts at 10 (the bottom list instead of the top)<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>user@1dd02175</td></tr>
+<tr>
+<td title='product.SpecificProductPositive()'><b>SpecificProductPositive</b><br>Test class: product<br/>
+<a href="#Output-230816477" onClick='toggleBox("Output-230816477", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-230816477" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-230816477">
+passed because status code = 200 and id = 1<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='login.LoginNegative()'><b>LoginNegative</b><br>Test class: login<br/>
+<a href="#Output-1510312933" onClick='toggleBox("Output-1510312933", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1510312933" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1510312933">
+passed because error<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>login@1372ed45</td></tr>
+<tr>
+<td title='user.SpecificUserPositive()'><b>SpecificUserPositive</b><br>Test class: user<br/>
+<a href="#Output-1579356102" onClick='toggleBox("Output-1579356102", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1579356102" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1579356102">
+passed because status code = 200 and id = 1<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>user@1dd02175</td></tr>
+<tr>
+<td title='product.CategoryProductNegative()'><b>CategoryProductNegative</b><br>Test class: product<br/>
+<a href="#Output-5557427" onClick='toggleBox("Output-5557427", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-5557427" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-5557427">
+passed because empty<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='product.DeleteProductPositive()'><b>DeleteProductPositive</b><br>Test class: product<br/>
+<a href="#Output-1595487029" onClick='toggleBox("Output-1595487029", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1595487029" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1595487029">
+passed because return the product as in the test documentation said<br/>
+The product will not be deleted on the database. but if you sent data successfully it will return you the fake deleted product.<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='product.AllProductPositive()'><b>AllProductPositive</b><br>Test class: product<br/>
+<a href="#Output-1799545709" onClick='toggleBox("Output-1799545709", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1799545709" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1799545709">
+passed because status code = 200<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='cart.AllcartsPositive()'><b>AllcartsPositive</b><br>Test class: cart<br/>
+<a href="#Output-1565560098" onClick='toggleBox("Output-1565560098", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1565560098" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1565560098">
+passed because status code = 200<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='product.LimitProductPositive()'><b>LimitProductPositive</b><br>Test class: product<br/>
+<a href="#Output-113202956" onClick='toggleBox("Output-113202956", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-113202956" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-113202956">
+passed because array 5 has nothing (no id)<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='product.SpecificProductNegative()'><b>SpecificProductNegative</b><br>Test class: product<br/>
+<a href="#Output-456240898" onClick='toggleBox("Output-456240898", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-456240898" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-456240898">
+passed because status code = 200 and has 0 body<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='cart.CartDatePostive()'><b>CartDatePostive</b><br>Test class: cart<br/>
+<a href="#Output-1591063329" onClick='toggleBox("Output-1591063329", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1591063329" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1591063329">
+passed because date on array 0 is 2020-03 02 and on array 1 s 2020-03-01<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='product.AddProductPostive()'><b>AddProductPostive</b><br>Test class: product<br/>
+<a href="#Output-844194537" onClick='toggleBox("Output-844194537", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-844194537" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-844194537">
+passed because new item name is the same as test data<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='product.CategoryProductPostive()'><b>CategoryProductPostive</b><br>Test class: product<br/>
+<a href="#Output-1267981674" onClick='toggleBox("Output-1267981674", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1267981674" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1267981674">
+passed because body is all the category<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+<tr>
+<td title='cart.SpecificcartPositive()'><b>SpecificcartPositive</b><br>Test class: cart<br/>
+<a href="#Output-187737357" onClick='toggleBox("Output-187737357", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-187737357" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-187737357">
+passed because status code = 200 and id = 1<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>cart@6a79c292</td></tr>
+<tr>
+<td title='user.DeleteUsersPositive()'><b>DeleteUsersPositive</b><br>Test class: user<br/>
+<a href="#Output-1169015699" onClick='toggleBox("Output-1169015699", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1169015699" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1169015699">
+passed because return the product as in the test documentation said<br/>
+The product will not be deleted on the database. but if you sent data successfully it will return you the fake deleted product.<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>user@1dd02175</td></tr>
+<tr>
+<td title='product.UpdateProductPostive()'><b>UpdateProductPostive</b><br>Test class: product</td>
+<td></td>
+<td>0</td>
+<td>product@37574691</td></tr>
+</table><p>
+</body>
+</html>

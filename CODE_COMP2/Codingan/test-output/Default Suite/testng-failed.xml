@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="cc2(failed)">
+    <classes>
+      <class name="product">
+        <methods>
+          <include name="SortProductNegative"/>
+          <include name="LimitProductNegative"/>
+          <include name="UpdateProductNegative"/>
+          <include name="uri"/>
+          <include name="AddProductNegative"/>
+        </methods>
+      </class> <!-- product -->
+      <class name="user">
+        <methods>
+          <include name="uri"/>
+          <include name="AddUserPositive"/>
+          <include name="PutUserPositive"/>
+          <include name="LimitUserNegative"/>
+          <include name="SpecificUserNegative"/>
+          <include name="SortUserNegative"/>
+        </methods>
+      </class> <!-- user -->
+      <class name="cart">
+        <methods>
+          <include name="SpecificcartNegative"/>
+          <include name="UserCartPostive"/>
+          <include name="uri"/>
+          <include name="LimitcartNegative"/>
+          <include name="UpdateCartNegative"/>
+          <include name="AddCartNegative"/>
+          <include name="SortcartNegative"/>
+        </methods>
+      </class> <!-- cart -->
+    </classes>
+  </test> <!-- cc2(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
