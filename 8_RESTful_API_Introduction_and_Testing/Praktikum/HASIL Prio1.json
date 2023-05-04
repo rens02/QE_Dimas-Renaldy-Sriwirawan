@@ -1,0 +1,310 @@
+{
+	"id": "8dc15e0f-2f91-479b-95e4-646139b5ff68",
+	"name": "Soal Prio1",
+	"timestamp": "2023-05-04T10:58:58.543Z",
+	"collection_id": "0-9c1499d0-c72b-4c82-b84c-c70ffba7f282",
+	"folder_id": 0,
+	"environment_id": "f9c23cf5-773e-47ff-ad90-88be898e8dae",
+	"totalPass": 7,
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "9c0a29b3-a8c7-43af-bb25-a2b3b962adae",
+			"name": "Mengambil semua data [+]",
+			"url": "https://jsonplaceholder.typicode.com/posts",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				41
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "14d21f06-c5fa-4ce6-916a-44e7ca201bbf",
+			"name": "Mengambil semua data [-]",
+			"url": "https://jsonplaceholder.typicode.com/posts1",
+			"time": 43,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				43
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true
+				}
+			]
+		},
+		{
+			"id": "1cdad313-1da9-46db-a338-c17570ec47ea",
+			"name": "Menambahkan data [+]",
+			"url": "https://jsonplaceholder.typicode.com/posts",
+			"time": 539,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				539
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "1cd8000e-da67-464c-a124-e8697c6c15ed",
+			"name": "Menambahkan data [-]kedua",
+			"url": "https://jsonplaceholder.typicode.com/posts",
+			"time": 550,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Result UserID should be -55 and its -55 ": true,
+				"Response status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Result UserID should be -55 and its -55 ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				550
+			],
+			"allTests": [
+				{
+					"Result UserID should be -55 and its -55 ": true,
+					"Response status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "af243259-74f7-4270-98dd-bfeb93debe3d",
+			"name": "Menambahkan data [-]",
+			"url": "https://jsonplaceholder.typicode.com/posts",
+			"time": 536,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				536
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f1ca3e4f-a612-483a-ae0b-3d6c8cf5f13b",
+			"name": "Mengambil data berdasarkan id [+]",
+			"url": "https://jsonplaceholder.typicode.com/posts?id=3",
+			"time": 33,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Result ID should be 3 and its 3 ": true
+			},
+			"testPassFailCounts": {
+				"Result ID should be 3 and its 3 ": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				33
+			],
+			"allTests": [
+				{
+					"Result ID should be 3 and its 3 ": true
+				}
+			]
+		},
+		{
+			"id": "f0fe5c18-e5db-4cb3-8194-123d6f88a91a",
+			"name": "Mengambil data berdasarkan id [-]",
+			"url": "https://jsonplaceholder.typicode.com/posts?id=-3",
+			"time": 34,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				34
+			],
+			"allTests": [
+				{
+					"Response status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "38b6b2dd-cd83-478e-b339-1fa30bc79f35",
+			"name": "Mengubah data berdasarkan id [+]",
+			"url": "https://jsonplaceholder.typicode.com/posts/1",
+			"time": 575,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Result ID should be 1 and its 1 ": true,
+				"Result UserID should be 212 and its 212 ": true
+			},
+			"testPassFailCounts": {
+				"Result ID should be 1 and its 1 ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Result UserID should be 212 and its 212 ": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				575
+			],
+			"allTests": [
+				{
+					"Result ID should be 1 and its 1 ": true,
+					"Result UserID should be 212 and its 212 ": true
+				}
+			]
+		},
+		{
+			"id": "6bdfb05c-1772-419d-a582-ae80dabe2a34",
+			"name": "Mengubah data berdasarkan id [-]",
+			"url": "https://jsonplaceholder.typicode.com/posts/1",
+			"time": 556,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Result ID should be -1 and its 1 ": false,
+				"Result UserID should be -212 and its -212 ": true
+			},
+			"testPassFailCounts": {
+				"Result ID should be -1 and its 1 ": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Result UserID should be -212 and its -212 ": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				556
+			],
+			"allTests": [
+				{
+					"Result ID should be -1 and its 1 ": false,
+					"Result UserID should be -212 and its -212 ": true
+				}
+			]
+		},
+		{
+			"id": "e39a204a-c4c5-4fba-b137-9cf67d7e5024",
+			"name": "Menghapus data berdasarkan id",
+			"url": "https://jsonplaceholder.typicode.com/posts/1",
+			"time": 560,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				560
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3467,
+	"collection": {
+		"requests": [
+			{
+				"id": "9c0a29b3-a8c7-43af-bb25-a2b3b962adae",
+				"method": "GET"
+			},
+			{
+				"id": "14d21f06-c5fa-4ce6-916a-44e7ca201bbf",
+				"method": "GET"
+			},
+			{
+				"id": "1cdad313-1da9-46db-a338-c17570ec47ea",
+				"method": "POST"
+			},
+			{
+				"id": "1cd8000e-da67-464c-a124-e8697c6c15ed",
+				"method": "POST"
+			},
+			{
+				"id": "af243259-74f7-4270-98dd-bfeb93debe3d",
+				"method": "POST"
+			},
+			{
+				"id": "f1ca3e4f-a612-483a-ae0b-3d6c8cf5f13b",
+				"method": "GET"
+			},
+			{
+				"id": "f0fe5c18-e5db-4cb3-8194-123d6f88a91a",
+				"method": "GET"
+			},
+			{
+				"id": "38b6b2dd-cd83-478e-b339-1fa30bc79f35",
+				"method": "PUT"
+			},
+			{
+				"id": "6bdfb05c-1772-419d-a582-ae80dabe2a34",
+				"method": "PUT"
+			},
+			{
+				"id": "e39a204a-c4c5-4fba-b137-9cf67d7e5024",
+				"method": "DELETE"
+			}
+		]
+	}
+}

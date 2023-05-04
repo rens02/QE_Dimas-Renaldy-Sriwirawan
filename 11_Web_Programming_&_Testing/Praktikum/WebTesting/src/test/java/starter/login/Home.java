@@ -10,4 +10,7 @@ public class Home extends PageObject {
     public void validateOnTheHomePage(){
         $(title()).isDisplayed();
     }
+    public void validateNOTOnTheHomePage(){
+        $(title()).shouldNotBePresent();
+    }
 }

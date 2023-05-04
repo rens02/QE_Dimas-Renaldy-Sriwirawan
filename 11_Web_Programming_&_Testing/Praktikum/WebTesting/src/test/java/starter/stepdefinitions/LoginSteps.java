@@ -25,15 +25,29 @@ public class LoginSteps {
         login.inputUsername("standard_user");
     }
     @And("I enter invalid password")
-    public void enterValidPassword(){
-        login.inputPassword("secret_sauce222");
+    public void enterInvalidPassword(){
+        login.inputPassword("secret_sauce2222");
     }
     @And("I click login button")
     public void clickLoginButton(){
         login.ClickLoginButton();
     }
-    @Then("I comeback to login page")
+    @Then("I comeback to home page")
     public void onTheHomePage(){
         home.validateOnTheHomePage();
     }
+    @Then("I stay on the login page")
+    public void stayOnLogin(){
+        home.validateNOTOnTheHomePage();
+    }
+
+    @When("I enter problem username")
+    public void enterProblemUsername(){
+        login.inputUsername("problem_user");
+    }
+    @And("I enter valid password")
+    public void enterValidPassword(){
+        login.inputPassword("secret_sauce");
+    }
+
 }
