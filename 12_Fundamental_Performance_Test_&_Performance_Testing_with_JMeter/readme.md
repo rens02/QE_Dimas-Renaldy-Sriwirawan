@@ -1,1 +1,1 @@
-{\rtf1}
+# Fundamental Performance Test
