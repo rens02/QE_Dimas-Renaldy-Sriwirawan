@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Default Suite</th></tr>
+<tr><td><a href="#t0">cc2</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,378</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">cc2 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="8">product</td><td><a href="#m0">AddProductNegative</a></td><td rowspan="1">1683707831609</td><td rowspan="1">1802</td></tr><tr class="passedeven"><td><a href="#m1">AddProductPostive</a></td><td rowspan="1">1683707833413</td><td rowspan="1">631</td></tr><tr class="passedeven"><td><a href="#m2">AllProductPositive</a></td><td rowspan="1">1683707834045</td><td rowspan="1">137</td></tr><tr class="passedeven"><td><a href="#m3">DeleteProductPositive</a></td><td rowspan="1">1683707834182</td><td rowspan="1">622</td></tr><tr class="passedeven"><td><a href="#m4">SpecificProductNegative</a></td><td rowspan="1">1683707834805</td><td rowspan="1">636</td></tr><tr class="passedeven"><td><a href="#m5">SpecificProductPositive</a></td><td rowspan="1">1683707835442</td><td rowspan="1">661</td></tr><tr class="passedeven"><td><a href="#m6">UpdateProductNegative</a></td><td rowspan="1">1683707836103</td><td rowspan="1">645</td></tr><tr class="passedeven"><td><a href="#m7">UpdateProductPostive</a></td><td rowspan="1">1683707836748</td><td rowspan="1">616</td></tr></tbody>
+</table>
+<h2>cc2</h2><h3 id="m0">product#AddProductNegative</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">passed because within the int range</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">product#AddProductPostive</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">passed because new item name is the same as test data</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">product#AllProductPositive</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">passed because status code = 200</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">product#DeleteProductPositive</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">passed because return the product as in the test documentation said<br/>The product will not be deleted on the database. but if you sent data successfully it will return you the fake deleted product.</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">product#SpecificProductNegative</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">passed because status code = 200 and has 0 body</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">product#SpecificProductPositive</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">passed because status code = 200 and id = 3</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">product#UpdateProductNegative</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">passed because self corrected</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">product#UpdateProductPostive</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

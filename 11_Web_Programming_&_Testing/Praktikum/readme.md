@@ -1,3 +1,7 @@
+# Soal Prioritas 1 Web Programmin
+![path](assets/prio1.png)
+
+# Soal WebTesting
 Hasil Akhir
 ![path](assets/web test.png)
 
