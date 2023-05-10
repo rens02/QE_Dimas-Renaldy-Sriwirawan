@@ -1,12 +1,8 @@
 # Langkah- Langkah melakukan testing dengan serenity BDD
    1. Buat Test Story
-    ![path](assets/1.png)
    2. Buat Test Class
-    ![path](assets/2.png)
    3. Buat Test Steps
-    ![path](assets/3.png)
    4. Buat Page Objects
-    ![path](assets/4.png)
    5. Running dengan ```mvn clean verify```
 
 
