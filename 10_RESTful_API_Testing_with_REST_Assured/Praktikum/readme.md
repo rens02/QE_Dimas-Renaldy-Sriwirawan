@@ -3,3 +3,5 @@ https://docs.google.com/spreadsheets/d/17TV9MXZj0BdDDp2DNhjdf73Mdrz0fAi9/edit?us
 
 # Screenshot Hasil
 ![path](assets/hasil.png)
+# Hasil Running
+![path](assets/hasil2.png)
