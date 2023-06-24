@@ -1,0 +1,20 @@
+
+
+CUSTOMER
+Student Register DONE
+Verif OTP IGNORE
+Student Login DONE
+Student Forgot Password DONE
+Take Course (Students -> transcation) DONE
+
+
+
+Access Modules inside the course (Students -> Modules -> GetModulesByCourseID)
+
+
+Mentor
+Mentor Login Logout DONE
+Manage customer who enrolled (Course -> GetStudentByCourse) (/mentors/courses/users/(id))
+Manage Course (course)
+Manage Learningh Modules (modules)
+Manage Assignment

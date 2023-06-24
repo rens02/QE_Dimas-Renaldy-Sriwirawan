@@ -8,9 +8,10 @@ module.exports = defineConfig({
     time: "",
     status: "",
     msg: "",
-    email: "lklklklklklk@mail.com",
-    pass: "123123",
-    regEmail: ""
+    email: "jono@gmail.com",
+    pass: "newpassword",
+    regEmail: "",
+    tokenMentor:""
   },
   projectId: 'ii65as',
   e2e: {
